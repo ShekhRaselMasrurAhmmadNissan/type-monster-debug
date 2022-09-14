@@ -12,12 +12,16 @@ let startTime;
 let questionText = '';
 
 // Load and display question
-fetch('./texts.json')
-	.then((res) => res.json())
-	.then((data) => {
-		questionText = data[Math.floor(Math.random() * data.length)];
-		question.innerHTML = questionText;
-	});
+const generateNewQuestion = () => {
+	fetch('./texts.json')
+		.then((res) => res.json())
+		.then((data) => {
+			questionText = data[Math.floor(Math.random() * data.length)];
+			question.innerHTML = questionText;
+		})
+		.catch((error) => console.log(error));
+};
+generateNewQuestion();
 
 // checks the user typed character and displays accordingly
 const typeController = (e) => {
@@ -49,8 +53,8 @@ const typeController = (e) => {
 	} else {
 		display.innerHTML += `<span class="red">${
 			newLetter === ' ' ? '▪' : newLetter
-      }</span>`;
-    errorCount++
+		}</span>`;
+		errorCount++;
 	}
 
 	// check if given question text is equal to user typed text
@@ -102,6 +106,7 @@ const gameOver = () => {
 const closeModal = () => {
 	modalBackground.classList.toggle('hidden');
 	resultModal.classList.toggle('hidden');
+	generateNewQuestion();
 };
 
 const start = () => {
