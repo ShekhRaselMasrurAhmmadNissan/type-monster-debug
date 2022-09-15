@@ -11,6 +11,10 @@ let errorCount = 0;
 let startTime;
 let questionText = '';
 
+window.onkeydown = function (e) {
+	return !(e.keyCode == 32);
+};
+
 // Load and display question
 const generateNewQuestion = () => {
 	fetch('./texts.json')
@@ -26,7 +30,8 @@ generateNewQuestion();
 // checks the user typed character and displays accordingly
 const typeController = (e) => {
 	const newLetter = e.key;
-	e.key == ' ' ? e.preventDefault() : '';
+	// e.key == ' ' ? e.preventDefault() : '';
+	console.log(e.target);
 	// Handle backspace press
 	if (newLetter == 'Backspace') {
 		userText = userText.slice(0, userText.length - 1);
