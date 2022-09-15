@@ -15,14 +15,13 @@
 			href="https://unpkg.com/flowbite@1.5.3/dist/flowbite.min.css"
 		/>
 	</head>
-	<body class="text-white">
-		<h1>Blog page Connected.</h1>
-		<section class="px-32 pt-4">
+	<body>
+		<section class="px-32 pt-16">
 			<div id="accordion-open" data-accordion="collapse">
 				<h2 id="accordion-open-heading-1">
 					<button
 						type="button"
-						class="flex items-center justify-between w-full p-5 font-medium text-white text-left border border-b-0 border-gray-200 rounded-t-xl focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800 bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-white"
+						class="flex items-center justify-between w-full p-5 font-bold text-left border border-b-0 border-gray-200 rounded-t-xl focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800 bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-white"
 						data-accordion-target="#accordion-open-body-1"
 						aria-expanded="true"
 						aria-controls="accordion-open-body-1"
@@ -40,7 +39,8 @@
 									clip-rule="evenodd"
 								></path>
 							</svg>
-							What is Flowbite?</span
+							What are differences between Local Storage and
+							Session Storage?</span
 						>
 						<svg
 							data-accordion-icon=""
@@ -63,23 +63,53 @@
 					aria-labelledby="accordion-open-heading-1"
 				>
 					<div
-						class="p-5 font-light border border-b-0 border-gray-200 dark:border-gray-700 dark:bg-gray-900"
+						class="p-5 border border-b-0 border-gray-200 dark:border-gray-700 dark:bg-gray-900"
 					>
-						<p class="mb-2 text-gray-500 dark:text-gray-400">
-							Flowbite is an open-source library of interactive
-							components built on top of Tailwind CSS including
-							buttons, dropdowns, modals, navbars, and more.
+						<p
+							class="mb-2 font-medium text-black dark:text-gray-400"
+						>
+							There are many differences between the
+							<strong>Local Storage</strong> and
+							<strong>Session Storage</strong>. There are lots of
+							similarities between these two storage. The main
+							differences between these two are the duration of
+							storing the Data. <br /><br />
 						</p>
-						<p class="text-gray-500 dark:text-gray-400">
-							Check out this guide to learn how to
-							<a
-								href="/docs/getting-started/introduction/"
-								class="text-blue-600 dark:text-blue-500 hover:underline"
-								>get started</a
-							>
-							and start developing websites even faster with
-							components on top of Tailwind CSS.
+
+						<h3
+							class="text-xl font-bold underline underline-offset-2"
+						>
+							Local Storage:
+						</h3>
+						<p class="font-medium text-black dark:text-gray-400">
+							There are no expiration limit for Local Storage.
+							Whenever a user visits as specific website they will
+							get the access in the Local Storage data. Since we
+							have to remove the local storage data in some
+							occasion, we can do that by setting an expiration
+							duration or deleting them manually. But the local
+							storage data of <strong>private window</strong> or
+							<strong>incognito tab</strong> will be deleted after
+							the tab or window closed.
 						</p>
+
+						<br />
+						<h3
+							class="text-xl font-bold underline underline-offset-2"
+						>
+							Session Storage:
+						</h3>
+						<p class="font-medium text-black dark:text-gray-400">
+							For session storage, the expiration time is limited.
+							Whenever a tab is created a session storage will be
+							created and the storage will be different for the
+							same website if they are opened in different tab.
+							However, if we want to get access to the session
+							storage of one tab from the other tab then we have
+							to duplicate the tab. Closing the tab or window will
+							automatically remove the session storage data.
+						</p>
+						<p></p>
 					</div>
 				</div>
 				<h2 id="accordion-open-heading-2">
