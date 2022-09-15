@@ -176,7 +176,7 @@
 						<h3
 							class="text-xl font-bold underline underline-offset-2"
 						>
-							Session Storage:
+							Block Scope:
 						</h3>
 						<p class="font-medium text-black dark:text-gray-400">
 							Block scope is also a sub-type of local scope. The
@@ -193,7 +193,7 @@
 				<h2 id="accordion-open-heading-3">
 					<button
 						type="button"
-						class="flex items-center justify-between w-full p-5 font-medium text-left text-gray-500 border border-gray-200 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800"
+						class="flex items-center justify-between w-full p-5 font-bold text-left text-gray-500 border border-gray-200 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800"
 						data-accordion-target="#accordion-open-body-3"
 						aria-expanded="false"
 						aria-controls="accordion-open-body-3"
@@ -211,8 +211,7 @@
 									clip-rule="evenodd"
 								></path>
 							</svg>
-							What are the differences between Flowbite and
-							Tailwind UI?</span
+							How does the JS Event loop works?</span
 						>
 						<svg
 							data-accordion-icon=""
@@ -237,42 +236,27 @@
 					<div
 						class="p-5 font-light border border-t-0 border-gray-200 dark:border-gray-700"
 					>
-						<p class="mb-2 text-gray-500 dark:text-gray-400">
-							The main difference is that the core components from
-							Flowbite are open source under the MIT license,
-							whereas Tailwind UI is a paid product. Another
-							difference is that Flowbite relies on smaller and
-							standalone components, whereas Tailwind UI offers
-							sections of pages.
+						<p class="font-medium text-black dark:text-gray-400">
+							The <strong>event loop</strong> is the secret behind
+							JavaScript's asynchronous programming. JS executes
+							all operations on a single thread, but using a few
+							smart data structures, it gives us the illusion of
+							multi-threading.
+							<br />
+							All the codes stored in memory randomly and JS
+							runtime engine run them one by one and store them in
+							a place named <strong>HEAP</strong>. In this process
+							when the engine face a function, promise or
+							setTimeOut or something like that which will take
+							some time to be executed, the engine will send them
+							to a stack. And move to the next code. After
+							finishing the task of the codes from stack they will
+							be sent to a Queue. After the engine process all the
+							code from the heap then the data from the Queue will
+							be sent to to the heap to be executed by the engine.
+							And this process is called the
+							<strong>Event Loop</strong> in JS.
 						</p>
-						<p class="mb-2 text-gray-500 dark:text-gray-400">
-							However, we actually recommend using both Flowbite,
-							Flowbite Pro, and even Tailwind UI as there is no
-							technical reason stopping you from using the best of
-							two worlds.
-						</p>
-						<p class="mb-2 text-gray-500 dark:text-gray-400">
-							Learn more about these technologies:
-						</p>
-						<ul
-							class="pl-5 text-gray-500 list-disc dark:text-gray-400"
-						>
-							<li>
-								<a
-									href="https://flowbite.com/pro/"
-									class="text-blue-600 dark:text-blue-500 hover:underline"
-									>Flowbite Pro</a
-								>
-							</li>
-							<li>
-								<a
-									href="https://tailwindui.com/"
-									rel="nofollow"
-									class="text-blue-600 dark:text-blue-500 hover:underline"
-									>Tailwind UI</a
-								>
-							</li>
-						</ul>
 					</div>
 				</div>
 			</div>
